@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><title>THREADLINE — Web Run</title><link rel="icon" href="data:,">  <script type="module" crossorigin src="./assets/webRun-B1BLOBSV.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/three.module-CNRKHaEC.js">
+  <link rel="modulepreload" crossorigin href="./assets/modulepreload-polyfill-P2Xu9kJm.js">
+  <link rel="stylesheet" crossorigin href="./assets/webRun-CS5iy71F.css">
+</head>
+<body>
+<canvas id="game" tabindex="0" aria-label="Webスイングゲーム"></canvas>
+<div id="hud"><div class="brand">THREADLINE<span>夜明けの街を、駆け抜けろ。</span></div><div id="mission">SKYLINE RUN <b id="progress">0 / 6</b><div class="mission-detail"><span id="security">DRONES 0 / 3</span><span id="shield" aria-label="シールド">◆◆◆</span></div><span id="next">光のリングを順番に通過</span></div><button id="pause" aria-label="一時停止">Ⅱ</button></div>
+<div id="reticle"><i></i><span id="anchor-hint">SPACE / 糸を掛ける</span></div>
+<div id="combat-hint"></div><div id="route-arrow"></div><div id="speed"><strong>0</strong><span>km/h</span><small id="state">AIR</small></div>
+<button id="swing-toggle" aria-pressed="false">糸を掛ける <small>G · 切替操作</small></button>
+
+<div id="mobile-controls" aria-label="タッチ操作">
+  <div id="mobile-look-zone" aria-label="視点操作エリア"></div>
+  <div id="move-stick" class="touch-control" aria-label="移動スティック">
+    <div class="stick-ring"><div id="move-knob" class="stick-knob"></div></div>
+    <span>MOVE</span>
+  </div>
+  <div id="mobile-actions" class="touch-control">
+    <div class="mobile-utility-row">
+      <button id="mobile-reel" class="mobile-action utility" type="button">巻く<small>HOLD</small></button>
+      <button id="mobile-dive" class="mobile-action utility" type="button">急降下<small>HOLD</small></button>
+    </div>
+    <button id="mobile-web" class="mobile-action web" type="button" aria-pressed="false">WEB<small>押す → 離す</small></button>
+    <div class="mobile-combat-row">
+      <button id="mobile-shot" class="mobile-action combat" type="button">糸撃</button>
+      <button id="mobile-kick" class="mobile-action combat" type="button">蹴る</button>
+      <button id="mobile-dodge" class="mobile-action combat" type="button">回避</button>
+    </div>
+  </div>
+  <div id="touch-look-hint">右側をドラッグして視点移動</div>
+</div>
+
+<div id="notice" role="status"></div>
+<div id="help"><span><kbd>W A S D</kbd> 移動・空中操作</span><span><kbd>Space / 左クリック</kbd> 押してスイング → 離して飛ぶ</span><span><kbd>← → / 右ドラッグ</kbd> 向きを変える</span><span><kbd>E</kbd> 糸を巻く <kbd>Shift</kbd> 急降下 <kbd>R</kbd> 屋上へ</span><span><kbd>F</kbd> 糸を撃つ <kbd>Q</kbd> 飛び蹴り <kbd>X</kbd> 回避</span></div>
+<div id="overlay"><div class="intro"><p class="eyebrow">A WEB-SWING ACTION PLAYGROUND</p><h1>街をつかめ。<br>空へ、放て。</h1><p>ビルに糸を掛けて、振り子の勢いで飛び出そう。<br>上り始めで離せば高く、底で離せば速く。<br>リングを6個くぐり、警備ドローン3機を止めよう。</p><button id="start">屋上から飛び出す <span>↗</span></button><small class="desktop-copy">キーボードとマウスでプレイ</small><small class="touch-copy">左スティックで移動 · 右側ドラッグで視点 · WEBを押して離す</small></div></div></body></html>
